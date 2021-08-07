@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  overflow: hidden;
+  place-items: center;
+}
+
+#front {
+  height: 100vh;
+  width: 600px;
+  z-index: 2000;
+  transition: 1.5s ease-in;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+#env {
+  height: 100vh;
+  width: 600px;
+  position: relative;
+  transition: 1s ease-out;
+  transform: rotateY(90deg);
+}
+
+.env__body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0;
+  width: 0;
+}
+
+#env__flap {
+  border-right: 300px solid transparent;
+  border-left: 300px solid transparent;
+  border-top: 50vh solid #aca720;
+  border-bottom: 50vh solid transparent;
+  z-index: 200;
+  transition: 1s ease-out;
+  width: 10px;
+}
+
+#env__top {
+  border-right: 300px solid transparent;
+  border-left: 300px solid transparent;
+  border-bottom: 50vh solid transparent;
+  border-top: 50vh solid #615b00;
+  z-index: 0;
+  width: 10px;
+}
+
+#env__bottom {
+  border-right: 300px solid #e6de71;
+  border-left: 300px solid #e6de71;
+  border-bottom: 50vh solid #e6de60;
+  border-top: 50vh solid transparent;
+  z-index: 100;
+  width: 10px;
+}
+
+#env > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-out;
+}
+
+.fade-in {
+  opacity: 1 !important;
+}
+
+.rotate-front {
+  transform: translate(-50%, -50%) rotateY(90deg) !important;
+}
+
+.rotate {
+  transition: 1s ease-out;
+  transform: rotateY(180deg) !important;
+}
+
+.open {
+  transform-origin: 0 -200vh;
+  transform: translate(-50%, -65%) rotateX(-180deg);
+}
+
+.put-front {
+  z-index: 250 !important;
+}
+
+.card-out {
+  transform: translate(-50%, -200%) rotateY(180deg) !important;
+}
+
+.card-in {
+  transform: translate(-50%, -50%) rotateY(180deg) !important;
+}
+
+.env-rotate {
+  transition: 1s ease-out;
+  transform: translate(-50%, -50%) rotateZ(-30deg) !important;
+}
+
+/* styling nav bar */
+
+nav {
+  transition: 1s ease-in-out;
+  height: 8vh;
+  background-color: #000000cc;
+  color: white;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+h1 > span {
+  color: seagreen;
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+.hide {
+  height: 0 !important;
+}
+.hide > h1 {
+  font-size: 0 !important;
+}
